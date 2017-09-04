@@ -1,1 +1,3 @@
+```bash 
 echo "comment_flag.__doc__"|ncat ppc1.chal.ctf.westerns.tokyo 10002
+```
