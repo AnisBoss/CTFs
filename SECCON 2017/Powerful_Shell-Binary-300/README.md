@@ -6,6 +6,7 @@ powerful_shell.ps1-1fb3af91eafdbebf3b3efa3b84fcc10cfca21ab53db15c98797b500c739b0
 ```bash
 strings powerful_shell.ps1-1fb3af91eafdbebf3b3efa3b84fcc10cfca21ab53db15c98797b500c739b0024: ASCII text
 ```
+```PowerShell
 $ECCON="";
 $ECCON+=[char](3783/291);
 $ECCON+=[char](6690/669);
@@ -38,7 +39,7 @@ $ECCON+=[char](10426/802);
 Write-Progress -Activity "Extracting Script" -status "20040" -percentComplete 99;
 $ECCON+=[char](520-510);
 2)));
-
+```
 for those who don't know powershell scripting , the script juste concat some chars to the variable $ECCON , i rewrite the script using python "transform.py"
 
 the output was :
