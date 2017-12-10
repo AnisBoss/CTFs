@@ -206,7 +206,7 @@ Arriving here , this step has two steps  :<br>
 **First Step :**
 the script generate some keytone using a for loop which leads the keytone to has this content (simply done using echo $keytone)
 Name                           Value                                                                                                                                     
-----                           -----                                                                                                                                     
+--                             --                                                                                                                                     
 f                              349.234151046506                                                                                                                          
 a                              261.63                                                                                                                                    
 g                              392.002080523246                                                                                                                          
