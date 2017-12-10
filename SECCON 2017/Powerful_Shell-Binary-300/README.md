@@ -202,7 +202,7 @@ $xordData = $(for ($i = 0; $i -lt $byteString.length; ) {
 iex([System.Text.Encoding]::ASCII.GetString($plain))
 ``` 
 
-Arriving here , this step has two steps  :
+Arriving here , this step has two steps  :<br>
 **First Step :**
 the script generate some keytone using a for loop which leads the keytone to has this content (simply done using echo $keytone)
 Name                           Value                                                                                                                                     
