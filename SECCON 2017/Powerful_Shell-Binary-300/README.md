@@ -204,7 +204,7 @@ iex([System.Text.Encoding]::ASCII.GetString($plain))
 
 Arriving here , this step has two steps  :<br>
 **First Step :**
-the script generate some keytone using a for loop which leads the keytone to has this content (simply done using echo $keytone)
+the script generate some keytone using a for loop which leads the keytone to has this content (simply done using echo $keytone)<br>
 Name                           Value                                                                                                                                     
 *-*-*-                         *-*-*-                                                                                                                                     
 f                              349.234151046506                                                                                                                          
