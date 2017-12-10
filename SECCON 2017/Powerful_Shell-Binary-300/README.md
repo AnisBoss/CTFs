@@ -221,7 +221,7 @@ s                              293.669745699181
 w                              277.187329377222                                                                                                                          
 t                              370.000694323673      
 
-![Alt text](/imgs/powershell.png?raw=true "Play the Melody")
+![Alt text](imgs/powershell.png?raw=true "Play the Melody")
 
 then the script asks us to play the melody , if we take a look at the while loop and for loop  just after the game : 
 ```PowerShell
