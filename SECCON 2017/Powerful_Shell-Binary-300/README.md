@@ -40,7 +40,7 @@ Write-Progress -Activity "Extracting Script" -status "20040" -percentComplete 99
 $ECCON+=[char](520-510);
 2)));
 ```
-for those who don't know powershell scripting , the script juste concat some chars to the variable $ECCON , i rewrite the script using python "transform.py"
+for those who don't know powershell scripting , the script juste concat some chars to the variable $ECCON , i rewrite the script using python 
 
 the output was :
 ```PowerShell
