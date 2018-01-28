@@ -16,7 +16,8 @@ if(count($_GET) > 0){
     list($key, $val) = each($_GET);
     $key($val);
 }
-?>```
+?>
+```
 
 But The admin forgot that we can bypass the filter using url encoding , we can call system("ls"):
 
