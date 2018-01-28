@@ -7,7 +7,7 @@ Disallow: /?debug
 
 Visiting http://35.196.45.11:8080/?debug provided the PHP source code that is driving the page:
 
-'''php
+```php
 
 $blacklist = "assert|system|passthru|exec|assert|read|open|eval|`|_|file|dir|\.\.|\/\/|curl|ftp|glob";
 
@@ -16,7 +16,7 @@ if(count($_GET) > 0){
     list($key, $val) = each($_GET);
     $key($val);
 }
-?>'''
+?>```
 
 But The admin forgot that we can bypass the filter using url encoding , we can call system("ls"):
 
