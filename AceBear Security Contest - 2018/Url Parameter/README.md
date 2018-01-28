@@ -1,9 +1,9 @@
 A quick poke around the URL revealed a robots.txt file which gave the first clue:
-
-# you know de wae ma queen
+```
+ you know de wae ma queen
 User-Agent: *
 Disallow: /?debug
-
+```
 
 Visiting http://35.196.45.11:8080/?debug provided the PHP source code that is driving the page:
 
