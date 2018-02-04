@@ -22,7 +22,7 @@ call   0x4006f0 <memset@plt> ;memset(rdi,0,0x96)
 6. Invoke system("/bin/sh")
 
 
-**Leaking a libc address**
+**Leaking a libc address** <br>
 Grab puts()’s entry in the GOT:
 
 ```bash
@@ -31,8 +31,8 @@ $ objdump -R BaskinRobins31 |grep "puts"
 ```
 If we can write puts()’s GOT entry back to us,We can do that by overwriting your_turn()’s saved return pointer to setup a ret2plt; in this case, write@plt. 
 Since we’re exploiting a 64-bit binary, we need to populate the RDI, RSI, and RDX registers with the arguments for write(). 
-So we need to return to a ROP gadget that sets up these registers, and then we can return to write@plt.
-**Get libc’s base address**
+So we need to return to a ROP gadget that sets up these registers, and then we can return to write@plt.<br>
+**Get libc’s base address** <br>
 Next we need to calculate libc’s base address in order to get the address of any library function, or even a gadget, in libc.
 ```bash
 $ ldd BaskinRobins31 
