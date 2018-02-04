@@ -1,4 +1,4 @@
-``bash
+```bash
 file file BaskinRobins31
 ```
 >BaskinRobins31: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=4abb416c74a16aaa8b4c9c6c366bed445c306037, not stripped
