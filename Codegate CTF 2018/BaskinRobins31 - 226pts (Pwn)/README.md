@@ -13,7 +13,7 @@ mov    esi,0x0 ;fill buffer with 0
 mov    rdi,rax ;copy adr of buffer to rdi 
 call   0x4006f0 <memset@plt> ;memset(rdi,0,0x96)
 [...]
-mov    edx,0x190 ;size to be read
+mov    edx,0x190 ;size to be read <== Buffer Overflow 
 mov    rsi,rax ;buff adr
 mov    edi,0x0 ;stdin
 call   0x400700 <read@plt>
