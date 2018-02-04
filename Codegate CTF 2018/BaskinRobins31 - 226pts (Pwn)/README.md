@@ -8,10 +8,10 @@ this task  involves leaking a libc function’s address from the GOT, and using 
 The vulnerability is in the your_turn() function, where read() is allowed to write 0x190 (400 bytes) into a 0x96 (150 bytes) buffer
 the following code shows the vulnerable part of the function 
 ```assembly
-mov    edx,0x96 #150 bytes 
-mov    esi,0x0 #fill buffer with 0
-mov    rdi,rax #copy adr of buffer to rdi 
-call   0x4006f0 <memset@plt> #memset(rdi,0,0x96)
+mov    edx,0x96 ;150 bytes 
+mov    esi,0x0 ;fill buffer with 0
+mov    rdi,rax ;copy adr of buffer to rdi 
+call   0x4006f0 <memset@plt> ;memset(rdi,0,0x96)
 ```
 **The high level solution to exploiting this is as follows:**
 1. Leak the address of a library function in the GOT. In this case, we’ll leak puts()’s GOT entry
