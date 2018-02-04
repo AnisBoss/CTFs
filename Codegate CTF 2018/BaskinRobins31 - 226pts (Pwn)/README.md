@@ -57,7 +57,7 @@ puts()’s offset is at 0x6e030. Subtracting this from the leaked puts()’s add
 To find the address of any library function, we just do the reverse and add the function’s offset to libc’s base address. 
 So to find system()’s address, we get its offset from libc.so.6, and add it to libc’s base address.
 
-**Overwrite a GOT entry’s address**
+**Overwrite a GOT entry’s address** <br>
 Now that we can get any library function address, we can do a ret2libc to complete the exploit. 
 We’ll overwrite puts()’s GOT entry with the address of system(), so that when we trigger a call to puts(), it will call system(“/bin/sh”) instead
 
