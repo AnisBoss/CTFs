@@ -2,10 +2,10 @@
 
 Hidden in Plain Sight http://34.201.73.166/
 
-**Solution : **
+**Solution :** <br>
 checking HTML source code doesn't  review any clue, then i checked robots.txt nothing there also, but .git reveal the website repository \o/ let's get it 
 
-```bash
+```
 anisboss@anisboss-PC:~/Nullcon2018/web200/$ wget --mirror -I .git http://34.201.73.166/.git 
 anisboss@anisboss-PC:~/Nullcon2018/web200/$ git log
 commit 4b95ce4491c7b505cf37ce8f38c95da668d9ad78
@@ -49,7 +49,7 @@ anisboss@anisboss-PC:~/Nullcon2018/web200/$ git show
 ```
 >/3e90c63922fa145442bb58d18b62af6c21717fee/index.php
 
-```html
+```php
 <html>
     <head>
         <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
@@ -111,9 +111,9 @@ else
 
 the password is trumpet
 
-logging in with 
-Username : passwordisinrockyou
-password : trumpet 
+logging in with <br>
+**Username** : passwordisinrockyou<br>
+**Password** : trumpet <br>
 
 reveals the flag 
 >hackim18{SeCuRiTy-MisConfiGuraTionS-ArE-Bad}
