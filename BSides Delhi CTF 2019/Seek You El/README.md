@@ -5,7 +5,7 @@ Select user from bsides where username="admin" and pw="{$_GET['_']}";
 ```
 This mean that we could login as admin if we provide the correct password for it.<br>
 So as first step i feeded the web page with "?_=test" as a GET parameter, but suddenly i recieved <br> **Sorry NO !!!** message ; <== Good start xD <br>
-It seems that the admin is blocking the character "_" from being used at the URL ; 
+It seems that the admin is blocking the character "\_" from being used at the URL ; 
 after struggling for a while and thanks to my teammates @dali  and @kerro they feed me with this from [php documentation](https://www.php.net/manual/en/language.variables.external.php) : <br>
 
 ```
@@ -40,7 +40,7 @@ The idea behind using exp() function is the construction  of a payload which ext
 
 the above payload just check if the ascii (same as ord) of the first character of password + 1 is under 709 or not ; we recived a page with our query. We conclude that : <br>
 ```
-ascii(first_char(password))+1 < 709
+ascii(first_char(password))+1 < 70
 ```
 After that we just play with the controller number until it gave us a blank page at exactly 653
 with some quick **Mafs** we can find that the first char of password is **9** using <br>
