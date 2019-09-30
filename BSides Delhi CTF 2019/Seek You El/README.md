@@ -27,7 +27,7 @@ A basic idea is to use time based attack since we get the same result independen
 
 among the SQL functions, we tried sleep() and benchmark() which were totally blocked and can't be used under this task ; <== the admin is so evil <br><BR>
 **Time based SQL Injection** : <font color="red" > Failed !! </font><BR><br>
-Looking again at  [mysql numeric functions list](https://dev.mysql.com/doc/refman/8.0/en/numeric-functions.html)  i noticed <u>exp(x)</u> function which stands for <i>Raising to the power of w</u><br>
+Looking again at  [mysql numeric functions list](https://dev.mysql.com/doc/refman/8.0/en/numeric-functions.html)  i noticed <u>exp(x)</u> function which stands for <i>Raising to the power of x</u><br>
 Locally i tested the function with random numbers until i recieved a wonderful message 
 > **ERROR 1690 (22003): DOUBLE value is out of range in 'exp(1000)'**.
 
