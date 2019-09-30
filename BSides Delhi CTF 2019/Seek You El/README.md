@@ -40,7 +40,7 @@ The idea behind using exp() function is the construction  of a payload which ext
 
 the above payload just check if the ascii (same as ord) of the first character of password + 1 is under 709 or not ; we recived a page with our query. We conclude that : <br>
 ```
-ascii(first_char(password))+1 < 70
+ascii(first_char(password))+1 < 709
 ```
 After that we just play with the controller number until it gave us a blank page at exactly 653
 with some quick **Mafs** we can find that the first char of password is **9** using <br>
@@ -60,5 +60,5 @@ then passing this password under the GET parameter gave us the flag \o/
 ---
 
 I really want to thank the author for this challenge ; didn't knew about this trick before, i don't know what we can call it ; but i think it's more **error/boolean SQL injection Attack** .
-i think there will be another function that has boundaries and can be used in this task .
+i think there will be another functions that has boundaries and can be used in this task .
 
