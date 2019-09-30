@@ -22,7 +22,7 @@ we succesffuly bypassed the first check, doing a SQL injection using
  
 >' or '1'='1
 
-didn't come up with a good result, so the admin is waiting for an explicit password for the admin and not the query itself. The page is responding either with the query or a blank page in case of error<br>
+didn't come up with a good result, so the author is waiting for an explicit password for the admin account and not the query itself. The page is responding either with the query or a blank page in case of error<br>
 A basic idea is to use time based attack since we get the same result independently from the input given. <br>
 
 among the SQL functions, we tried sleep() and benchmark() which were totally blocked and can't be used under this task ; <== the admin is so evil <br><BR>
