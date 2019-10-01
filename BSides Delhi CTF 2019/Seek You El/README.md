@@ -1,4 +1,4 @@
-# Web: Seek You El
+# Web: Seek You El ( 7 solves )
 We were given a website that contains a php application, looking at the php code, it will embed our given input which is a GET parameter "_" into an SQL query which looks like this :
 ```sql
 Select user from bsides where username="admin" and pw="{$_GET['_']}";
@@ -38,7 +38,7 @@ The idea behind using exp() function is the construction  of a payload which ext
 
 [http://35.232.184.83/index.php?.='or exp(ord(substr(pw,1,1))+1)>0 and user=0x61646d696e and '1'='1]()
 
-the above payload just check if the ascii (same as ord) of the first character of password + 1 is under 709 or not ; we recived a page with our query. We conclude that : <br>
+the above payload just check if the ascii (same as ord) of the first character of password + 1 is under 709 or not ; we recieved a page with our query. We conclude that : <br>
 ```
 ascii(first_char(password))+1 < 709
 ```
