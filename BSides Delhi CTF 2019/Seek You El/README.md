@@ -1,11 +1,11 @@
-# Web: Seek You El
+# Web: Seek You El ( 7 solves )
 We were given a website that contains a php application, looking at the php code, it will embed our given input which is a GET parameter "_" into an SQL query which looks like this :
 ```sql
 Select user from bsides where username="admin" and pw="{$_GET['_']}";
 ```
 This mean that we could login as admin if we provide the correct password for it.<br>
 So as first step i feeded the web page with "?_=test" as a GET parameter, but suddenly i recieved <br> **Sorry NO !!!** message ; <== Good start xD <br>
-It seems that the admin is blocking the character "_" from being used at the URL ; 
+It seems that the admin is blocking the character "\_" from being used at the URL ; 
 after struggling for a while and thanks to my teammates @dali  and @kerro they feed me with this from [php documentation](https://www.php.net/manual/en/language.variables.external.php) : <br>
 
 ```
@@ -22,12 +22,12 @@ we succesffuly bypassed the first check, doing a SQL injection using
  
 >' or '1'='1
 
-didn't come up with a good result, so the admin is waiting for an explicit password for the admin and not the query itself. The page is responding either with the query or a blank page in case of error<br>
+didn't come up with a good result, so the author is waiting for an explicit password for the admin account and not the query itself. The page is responding either with the query or a blank page in case of error<br>
 A basic idea is to use time based attack since we get the same result independently from the input given. <br>
 
 among the SQL functions, we tried sleep() and benchmark() which were totally blocked and can't be used under this task ; <== the admin is so evil <br><BR>
 **Time based SQL Injection** : <font color="red" > Failed !! </font><BR><br>
-Looking again at  [mysql numeric functions list](https://dev.mysql.com/doc/refman/8.0/en/numeric-functions.html)  i noticed <u>exp(x)</u> function which stands for <i>Raising to the power of w</u><br>
+Looking again at  [mysql numeric functions list](https://dev.mysql.com/doc/refman/8.0/en/numeric-functions.html)  i noticed <u>exp(x)</u> function which stands for <i>Raising to the power of x</u><br>
 Locally i tested the function with random numbers until i recieved a wonderful message 
 > **ERROR 1690 (22003): DOUBLE value is out of range in 'exp(1000)'**.
 
@@ -38,7 +38,7 @@ The idea behind using exp() function is the construction  of a payload which ext
 
 [http://35.232.184.83/index.php?.='or exp(ord(substr(pw,1,1))+1)>0 and user=0x61646d696e and '1'='1]()
 
-the above payload just check if the ascii (same as ord) of the first character of password + 1 is under 709 or not ; we recived a page with our query. We conclude that : <br>
+the above payload just check if the ascii (same as ord) of the first character of password + 1 is under 709 or not ; we recieved a page with our query. We conclude that : <br>
 ```
 ascii(first_char(password))+1 < 709
 ```
@@ -60,5 +60,5 @@ then passing this password under the GET parameter gave us the flag \o/
 ---
 
 I really want to thank the author for this challenge ; didn't knew about this trick before, i don't know what we can call it ; but i think it's more **error/boolean SQL injection Attack** .
-i think there will be another function that has boundaries and can be used in this task .
+i think there will be another functions that has boundaries and can be used in this task .
 
